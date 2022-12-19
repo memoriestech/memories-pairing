@@ -1,0 +1,10 @@
+query PokemonQuery {
+  pokemon_v2_pokemonsprites {
+    id
+    sprites
+    pokemon_v2_pokemon {
+      name
+      id
+    }
+  }
+}
