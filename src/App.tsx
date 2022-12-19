@@ -1,13 +1,10 @@
 import React from 'react';
 import './App.css';
 import logo from './logo.svg';
-import config from './config';
-import {GraphQLProvider} from './providers/GraphQLProvider';
 
 function App() {
   return (
     <div className="App">
-      <GraphQLProvider endpoint={config.GRAPHQL_ENDPOINT}>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -22,7 +19,6 @@ function App() {
             Learn React
           </a>
         </header>
-      </GraphQLProvider>
     </div>
   );
 }

@@ -1,14 +1,14 @@
 import { createClient, Provider } from 'urql';
 import { ReactNode } from 'react';
+import config from '../config';
 
-type GraphQLProviderProps = {
-  endpoint: string;
+type PokemonProviderProps = {
   children: ReactNode;
 };
 
-export const GraphQLProvider: React.FC<GraphQLProviderProps> = ({endpoint, children }) => {
+export const PokemonProvider: React.FC<PokemonProviderProps> = ({children}) => {
   const client = createClient({
-    url: endpoint,
+    url: config.GRAPHQL_ENDPOINT,
   });
   return <Provider value={client}>{children}</Provider>;
 };
