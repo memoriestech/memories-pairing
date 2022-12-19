@@ -50862,6 +50862,16 @@ export type PokemonQueryQuery = {
       __typename?: "pokemon_v2_pokemon";
       name: string;
       id: number;
+      weight?: number | null;
+      base_experience?: number | null;
+      height?: number | null;
+      pokemon_v2_pokemonabilities: Array<{
+        __typename?: "pokemon_v2_pokemonability";
+        pokemon_v2_ability?: {
+          __typename?: "pokemon_v2_ability";
+          name: string;
+        } | null;
+      }>;
     } | null;
   }>;
 };
@@ -50874,6 +50884,14 @@ export const PokemonQueryDocument = gql`
       pokemon_v2_pokemon {
         name
         id
+        weight
+        base_experience
+        height
+        pokemon_v2_pokemonabilities {
+          pokemon_v2_ability {
+            name
+          }
+        }
       }
     }
   }

@@ -5,6 +5,14 @@ query PokemonQuery {
     pokemon_v2_pokemon {
       name
       id
+      weight
+      base_experience
+      height
+      pokemon_v2_pokemonabilities {
+        pokemon_v2_ability {
+          name
+        }
+      }
     }
   }
 }
